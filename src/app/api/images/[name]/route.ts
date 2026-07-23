@@ -10,7 +10,7 @@ const IMAGE_MAP: Record<string, string> = {
 
 export async function GET(
   request: Request,
-  { params }: { params: { name: string } }
+  { params }: { params: Promise<{ name: string }> }
 ) {
   const { name } = await params;
   const fileName = IMAGE_MAP[name];
