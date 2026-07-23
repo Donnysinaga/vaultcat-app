@@ -25,15 +25,26 @@ export async function GET(
   const brainDir = "C:\\Users\\Donny\\.gemini\\antigravity\\brain\\5251cd8f-cd54-43b0-80a7-101e1749ac1e";
   const filePath = path.join(brainDir, fileName);
 
-  // Auto-copy logo.png and favicon.png to public/logo if they don't exist
+  // Auto-copy logo.png, favicon.png, hero.jpg, and sleeping.jpg to public directories if they don't exist
   try {
     const publicLogoDir = path.join(process.cwd(), "public", "logo");
+    const publicImagesDir = path.join(process.cwd(), "public", "images");
+    
     if (!fs.existsSync(publicLogoDir)) {
       fs.mkdirSync(publicLogoDir, { recursive: true });
     }
+    if (!fs.existsSync(publicImagesDir)) {
+      fs.mkdirSync(publicImagesDir, { recursive: true });
+    }
+
     const publicLogoPath = path.join(publicLogoDir, "logo.png");
     const publicFaviconPath = path.join(publicLogoDir, "favicon.png");
+    const publicHeroPath = path.join(publicImagesDir, "hero.jpg");
+    const publicSleepingPath = path.join(publicImagesDir, "sleeping.jpg");
+
     const logoSourcePath = path.join(brainDir, IMAGE_MAP["logo"]);
+    const heroSourcePath = path.join(brainDir, IMAGE_MAP["hero"]);
+    const sleepingSourcePath = path.join(brainDir, IMAGE_MAP["sleeping"]);
 
     if (fs.existsSync(logoSourcePath)) {
       if (!fs.existsSync(publicLogoPath)) {
@@ -42,6 +53,12 @@ export async function GET(
       if (!fs.existsSync(publicFaviconPath)) {
         fs.copyFileSync(logoSourcePath, publicFaviconPath);
       }
+    }
+    if (fs.existsSync(heroSourcePath) && !fs.existsSync(publicHeroPath)) {
+      fs.copyFileSync(heroSourcePath, publicHeroPath);
+    }
+    if (fs.existsSync(sleepingSourcePath) && !fs.existsSync(publicSleepingPath)) {
+      fs.copyFileSync(sleepingSourcePath, publicSleepingPath);
     }
   } catch (err) {
     console.error("Auto-copy assets failed:", err);

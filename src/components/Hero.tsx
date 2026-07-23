@@ -123,7 +123,7 @@ export default function Hero() {
             className="relative w-full h-full"
           >
             <Image
-              src="/api/images/hero"
+              src="/images/hero.jpg"
               alt="VaultCat Guardian Mascot"
               fill
               className="object-contain hover:scale-105 transition-transform duration-700"

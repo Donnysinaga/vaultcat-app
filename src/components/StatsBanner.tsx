@@ -62,7 +62,7 @@ export default function StatsBanner() {
         <div className="relative w-56 h-28 shrink-0 flex items-center justify-center">
           <div className="relative w-full h-full rounded-2xl overflow-hidden border border-purple-500/15 bg-purple-950/5">
             <Image
-              src="/api/images/sleeping"
+              src="/images/sleeping.jpg"
               alt="Sleeping VaultCat Mascot"
               fill
               className="object-cover"
