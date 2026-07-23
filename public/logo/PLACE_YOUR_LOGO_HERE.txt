@@ -1,0 +1,15 @@
+VaultCat Logo Upload Folder
+===========================
+
+Untuk mengganti logo dan favicon website secara otomatis tanpa mengubah kode, cukup letakkan file logo baru Anda di folder ini:
+
+1. Logo Website:
+   Ganti file 'logo.png' di folder ini dengan file logo Anda sendiri.
+   Nama file harus tetap: logo.png
+
+2. Favicon (Icon Browser Tab):
+   Ganti file 'favicon.png' di folder ini dengan file favicon Anda sendiri.
+   Nama file harus tetap: favicon.png
+
+Folder lokasi fisik di komputer Anda:
+C:\Users\Donny\.gemini\antigravity\scratch\vaultcat-app\public\logo\
