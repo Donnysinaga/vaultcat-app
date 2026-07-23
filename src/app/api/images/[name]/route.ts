@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
+export const dynamic = "force-dynamic";
+
 const IMAGE_MAP: Record<string, string> = {
   logo: "vaultcat_logo_1784772993384.jpg",
   hero: "vaultcat_hero_1784772981004.jpg",
