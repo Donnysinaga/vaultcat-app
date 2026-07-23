@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #050212;
+    color: #ffffff;
+    font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050212;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e1145;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a855f7;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), system-ui, sans-serif;
+  }
+
+  .glass-card {
+    background: rgba(11, 6, 35, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(168, 85, 247, 0.12);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .glass-card-glow-purple {
+    background: rgba(11, 6, 35, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(168, 85, 247, 0.05), 0 0 20px rgba(168, 85, 247, 0.15);
+  }
+
+  .glass-card-glow-pink {
+    background: rgba(11, 6, 35, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(236, 72, 153, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(236, 72, 153, 0.05), 0 0 20px rgba(236, 72, 153, 0.15);
+  }
+
+  .text-glow-purple {
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+  }
+
+  .text-glow-pink {
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+  }
+
+  .border-glow-purple {
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
+  }
+
+  .border-glow-pink {
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.15);
+  }
+  
+  .glow-bg-radial {
+    background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.15), transparent 60%);
+  }
+}
